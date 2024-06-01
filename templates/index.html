@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Failure Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Heart Failure Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br>
+        <label for="creatinine_phosphokinase">Creatinine Phosphokinase:</label>
+        <input type="text" id="creatinine_phosphokinase" name="creatinine_phosphokinase" required><br>
+        <label for="ejection_fraction">Ejection Fraction:</label>
+        <input type="text" id="ejection_fraction" name="ejection_fraction" required><br>
+        <label for="platelets">Platelets:</label>
+        <input type="text" id="platelets" name="platelets" required><br>
+        <label for="serum_creatinine">Serum Creatinine:</label>
+        <input type="text" id="serum_creatinine" name="serum_creatinine" required><br>
+        <label for="serum_sodium">Serum Sodium:</label>
+        <input type="text" id="serum_sodium" name="serum_sodium" required><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
